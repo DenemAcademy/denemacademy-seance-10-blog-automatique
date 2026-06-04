@@ -1,0 +1,184 @@
+Source: 0601.mp4
+Langue: fr (1.00)
+
+[00:00:00 - 00:00:06] C'est reparti, on continue du coup sur notre lancer par rapport à WordPress et les mentors.
+[00:00:06 - 00:00:12] Donc là sur la séance 10, on va parler de blogs automatiques, donc c'est ce qu'on va créer.
+[00:00:12 - 00:00:17] Donc ça est une longue séance parce que d'une part, il va falloir créer le blog et d'une autre part,
+[00:00:17 - 00:00:23] créer l'automatisation qui va nous permettre de publier automatiquement des articles SEO.
+[00:00:23 - 00:00:30] Donc normalement après la séance 9, tu dois avoir fait ton site avec élément de tord avec l'autre code.
+[00:00:30 - 00:00:38] Donc comme on a vu, tu dois avoir validé le responsif et tu dois avoir plusieurs pages pour avoir un site
+[00:00:38 - 00:00:42] professionnel et qualitatif. Encore une fois, moi je me suis arrêté sur un site qui est assez
+[00:00:42 - 00:00:48] simple, les relations ont été créées, on va le voir après quand on ira travailler sur le blog et
+[00:00:48 - 00:00:56] que Codex prendra. Pourquoi Codex n'est pas Claude Code ? Ça va être important encore une fois
+[00:00:56 - 00:01:04] parce que Claude Code, on n'a pas beaucoup parlé de Codex, on l'a fait dans la précédente session.
+[00:01:04 - 00:01:11] Un petit test avec Codex qui n'était pas non plus au top, dans le sens où on l'a dit de générer
+[00:01:11 - 00:01:17] des images, il a pris du temps, il a un petit peu bugué mais pour vous donner un ordre d'idée,
+[00:01:17 - 00:01:25] actuellement j'utilise que Codex pour mes clés. Donc je travaille qu'avec ce modèle.
+[00:01:25 - 00:01:29] Pourquoi ? Parce qu'il y a un système de réflexion qui est bien plus poussé que celui de
+[00:01:29 - 00:01:35] Codex pour vous donner un ordre d'idée si derrière ce qu'on va voir ensemble sur cette séance-là,
+[00:01:35 - 00:01:38] je le donne à Claude Codex, il le fera pas. En tout cas il fera quelque chose qui n'est pas
+[00:01:38 - 00:01:42] qualitatif. Il va prendre 15-20 minutes, il sera plus rapide que Codex mais le résultat il va être
+[00:01:42 - 00:01:48] minimum. Donc voilà pourquoi je décide de passer sur Codex. Je lui donne une tâche, il va jusqu'au
+[00:01:48 - 00:01:52] bout, quitte à prendre 40-50 minutes et ça c'est important parce que ça nous évite d'aller
+[00:01:52 - 00:02:01] faire des allers-retours, d'aller regarder après justement le code pour comprendre ce qui va pas.
+[00:02:01 - 00:02:06] On pourrait très bien demander aussi à Claude Codex mais le problème c'est qu'il se perd assez
+[00:02:06 - 00:02:12] souvent. C'est pour ça qu'on va utiliser Codex et actuellement pour moi le GPT 5.5 est le meilleur
+[00:02:12 - 00:02:18] modèle du marché. Il n'y a pas mieux. Honnêtement il met une vitesse à Claude Codex, c'est
+[00:02:18 - 00:02:24] stratosphérique. Donc voilà pourquoi et je trouve intéressant aussi de changer un petit peu d'alternée.
+[00:02:24 - 00:02:27] Pour vous comme ça derrière vous avez une expertise sur les deux parce que je pense que c'est important
+[00:02:27 - 00:02:33] pour vous comme vous avez sorti de cette formation là de vraiment connaître ces deux
+[00:02:33 - 00:02:39] systèmes, enfin ces deux outils parce que derrière vous avez pouvoir très bien vous
+[00:02:39 - 00:02:44] adapter. Par exemple vous avez une automatisation simple à mettre en place. Ok Claude Codex est
+[00:02:44 - 00:02:49] plus rapide, je peux gagner du temps. Bon je vais utiliser Claude Codex. Ça c'est complexe donc
+[00:02:49 - 00:02:54] en arrière tâche je pourrais très bien utiliser Codex. Comme ça je sais qu'il travaille peut-être
+[00:02:54 - 00:02:58] pendant 40 minutes mais au moins on a quelque chose de qualitatif. Du coup je combine les deux
+[00:02:58 - 00:03:03] et je crée une sorte de recette pour que derrière soit productif et que j'ai de la qualité.
+[00:03:03 - 00:03:08] Donc en gros ce qu'il va faire pendant les quatre phases c'est pour ça que c'est important
+[00:03:08 - 00:03:17] d'avoir un site qui correspond du coup avant le marché votre cible etc. Donc il va analyser
+[00:03:17 - 00:03:21] complètement tout notre site. Encore une fois on va utiliser MCP parce qu'on va lui donner des
+[00:03:21 - 00:03:36] visuels donc palettes typo, espacements, animations. Il va aller lister les composants et les mentors
+[00:03:36 - 00:03:42] déjà mis en place. Il va capter le ton de ce que je dis, comprendre justement ma cible etc.
+[00:03:42 - 00:03:47] Ensuite il va installer les plugins donc RankMats pour ceux qui ne connaissent pas c'est le top
+[00:03:47 - 00:03:52] du top pour le SEO, pour les articles, pour voir justement la qualité de ce qu'on propose.
+[00:03:52 - 00:03:57] Ensuite il va créer cinq catégories vides avec six champs ACF sur le post-to-post. Après on verra
+[00:03:57 - 00:04:02] par la suite justement cette partie là. Il va construire le template d'articles et il va
+[00:04:02 - 00:04:06] construire la page. Donc on aura une structure fonctionnelle qualitatif qui va nous permettre
+[00:04:06 - 00:04:13] ensuite de skyline maximum les articles avec notre audité SEO. Donc on crée une base qui est
+[00:04:13 - 00:04:18] solide avec un bon design. Comme ça derrière on n'aura pas des articles qui seront générés,
+[00:04:18 - 00:04:24] qui seront trop simples en fait parce que tout va se passer visuellement aussi. On va
+[00:04:24 - 00:04:30] le voir ensemble. En gros ce qu'on va avoir besoin du coup c'est notre type WordPress donc on va
+[00:04:30 - 00:04:37] lui donner l'URL comme on l'a fait avec notre code lors de la séance 9. On va lui donner nos
+[00:04:37 - 00:04:41] accès WPA 1000 enfin c'est nous qui allons le renseigner donc derrière lui il n'aura pas accès
+[00:04:41 - 00:04:47] à cette partie là. On va utiliser Codex comme on l'a vu et on va brancher du coup l'extension
+[00:04:47 - 00:04:54] Chrome, mcp comme on a fait avec Codecode tout à l'heure et sur les autres séances aussi et après
+[00:04:54 - 00:05:05] on va donc maintenant on va ouvrir Codex c'est toujours la même logique, faisant détail de tout
+[00:05:05 - 00:05:15] le système qui va créer etc ensemble comme ça derrière. On lance Codex donc on lance
+[00:05:15 - 00:05:28] ou Codex tout simplement dans mon business connecté à co-work, site, on a fait séance 9, on va
+[00:05:28 - 00:05:50] créer les pages donc c'est différent. C'est nouveau terminal au dossier encore une fois Codex dans
+[00:05:50 - 00:05:59] jour de skip, entré je suis bien connecté. J'utilise ça parce que là on demande une tâche qui est
+[00:05:59 - 00:06:06] assez compliquée enfin même très compliquée on n'a pas besoin d'accepter 100 fois entrer pour que
+[00:06:06 - 00:06:14] derrière nous travaillons l'autonomie, la capacité donc autant en profiter. Donc là on arrive juste ici
+[00:06:14 - 00:06:43] on va faire encore une fois la même chose connecte toi. Là parce que je l'utilise tellement sur
+[00:06:43 - 00:06:53] différents projets que derrière parfois il m'envoie des petites alertes comme ça. C'est son petit
+[00:06:53 - 00:07:10] problème aussi parfois il me freine sur certains projets pourtant c'est totalement abandonné
+[00:07:11 - 00:07:22] donc là il s'est connecté du coup à ma page donc c'est top on va attendre qu'il charge un
+[00:07:22 - 00:07:37] petit peu je n'ai pas j'ai le bon temps ouverte. Ok donc là il est sur la page accueil dessus le plus
+[00:07:37 - 00:08:53] important c'est qu'il arrive directement comme ça il a vraiment etc donc là on est bon et
+[00:08:53 - 00:08:57] maintenant on va tout simplement faire encore une fois la même chose on va lui donner un prompt
+[00:08:57 - 00:09:01] on va l'analyser un petit peu après parce que ça prend beaucoup de temps sa réflexion
+[00:09:01 - 00:10:28] du coup on aura le temps de faire autre chose le temps le design d'autonomie. Mon lien j'ai passé pas
+[00:10:28 - 00:10:37] mal de temps on lui montre derrière on fait ou assez mieux c'est toi qui a fait le site donc
+[00:10:37 - 00:10:58] fais le blog maintenant le but c'est de lui donner du contexte du contexte et tu es represse
+[00:10:58 - 00:11:10] plus un expert et si vous avez une optimisation tu as accès au Chrome MCP on utilise ma mission
+[00:11:10 - 00:11:56] pour toi ce résumat de livrable la page archive blog et après on lui demande aussi de nous créer
+[00:11:56 - 00:12:57] le template donc les variables encore une fois c'est l'url du site donc lui il va le trouver tout seul
+[00:12:57 - 00:13:04] c'est pour ça que je lui ai pas donné l'url wadmin ça lui permet de faire de les modifications
+[00:13:04 - 00:13:10] et la password on lui donne pas encore une fois il a déjà accès donc en gros ce que je lui dis
+[00:13:10 - 00:13:15] c'est qu'il travaille en cinq phases en chaque phase écrit ce que tu vas faire après écrit ce
+[00:13:15 - 00:13:22] que tu as appris le but c'est qu'il s'autocorrige constamment donc on lui donne un projet réalisé
+[00:13:22 - 00:13:28] il le fait mais quand il le fait en fait c'est pas en one shot c'est que ok je vais faire ça pour ça
+[00:13:28 - 00:13:34] et ça c'est très important parce que il a une réflexion énorme en fait faut qu'on utilise
+[00:13:34 - 00:13:40] encore une fois si derrière on lui laisse pas le fin on lui donne l'obligation de tout faire
+[00:13:40 - 00:13:48] en one shot quelque chose certes qui sera pas mal mais qui sera pas on va dire parfait voilà pourquoi
+[00:13:48 - 00:13:55] je fais ça en gros il va croler tout nos sites internet en question donc en mcp avec les pages
+[00:13:55 - 00:14:00] à analyser au homme servi sa propos contact footer page pour chaque page extrait avec précision
+[00:14:00 - 00:14:09] donc là ce qui va être important encore une fois si vous avez plusieurs pages derrière tous les
+[00:14:09 - 00:14:13] regarder donc vous pouvez très bien aussi dans le prompt lui donner tous les liens de vos pages
+[00:14:13 - 00:14:20] ensuite il va aller checker du coup l'identité visuelle donc avec les palettes complète il va
+[00:14:20 - 00:14:25] comprendre du coup votre design il va regarder la chip au le système des passe de despassement ça
+[00:14:25 - 00:14:37] ça va être important aussi pour l'article automatique il va regarder les borders les radios les
+[00:14:37 - 00:15:39] shadows il va regarder également visuel après il va regarder les composants et le mort
+[00:15:39 - 00:15:47] existant donc il va voir s'il y a des aideurs et d'heure c'est quoi c'est par exemple je serai pas
+[00:15:47 - 00:15:56] ensuite il va regarder les héros paternes les cartes les cta blogs les sections sauvegarde et
+[00:15:56 - 00:16:02] template et monteur déjà créé il va regarder les animations pour voir si il peut les dupliquer
+[00:16:02 - 00:16:07] ensuite les maintenant le système de blog il va regarder aussi le ton et la vision donc le métier
+[00:16:07 - 00:16:14] la promesse la cible donc moi c'est la restauration il va voir comment s'exprime aussi il va regarder
+[00:16:14 - 00:16:20] le champ lexical récurrent en fait c'est pas on lui donne ça il va pas le faire c'est ça aussi
+[00:16:20 - 00:16:24] la puissance de ce modèle là c'est que derrière il va vraiment ce qui va être intéressant et
+[00:16:24 - 00:16:31] important c'est qu'il va vraiment tout simplement les noter en fichiers d et ensuite il va travailler
+[00:16:31 - 00:16:37] dessus lors des prochaines phases donc la stack actuelle ces thèmes version élémentaires plus
+[00:16:37 - 00:16:45] guillet d'actifs plus guillessus en place etc c'est ça qui doit tout simplement la phase deux c'est la
+[00:16:45 - 00:16:53] partie pré roqui donc pré roqui avec les plugins la tox et la partie a cf donc ça on va le voir un
+[00:16:53 - 00:16:58] petit peu plus en détail les plugins c'est quoi c'est tout simplement des petits outils qui nous
+[00:16:58 - 00:18:04] permettent qui nous permettent d'améliorer wordpress presse avec des blogs etc ajouter d'autres
+[00:18:04 - 00:18:17] ajouter des créations pdf on peut ajouter des automatisations enfin le but c'est l'incart de
+[00:18:17 - 00:18:25] wordpress plein d'extensions qui n'a pas système qui est escalable donc vous pouvez très bien créer
+[00:18:25 - 00:18:49] un icôme directement sur le presse en ajoutant des a cf a cf tout reste api qui après smush
+[00:18:49 - 00:19:10] ou choix les images que vous allez mettre c'est des petits détails mais c'est des détails qui
+[00:19:10 - 00:19:17] sont extrêmement important pour ça que derrière je veux qu'il installe ça chaque image qu'on a
+[00:19:17 - 00:20:41] intégré après on a une partie de temps de lecture niveau de select faq source mises
+[00:20:41 - 00:20:48] à jour manuel donc là c'est les points très important qu'on veut qu'il mette constamment qui
+[00:20:48 - 00:20:55] permet d'avoir un blog qui est bien custom qui est bien différent qui est professionnel et que
+[00:20:55 - 00:20:59] google m donc on le surcharge on le surcharge pas trop non plus mais en tout cas on le propose
+[00:20:59 - 00:21:27] il est assez template signal post sur un article on l'a vu juste ici on a un template donc ça
+[00:21:27 - 00:21:31] c'est un template donc si je crée un nouvel article bah je vais réutiliser ce template de
+[00:21:31 - 00:22:15] là à changer c'était à la il reste constance visuelle avec le reste du site donc la structure on
+[00:22:15 - 00:22:30] lui donne la structure de ce que c'est c'est pas mal du coup pour la partie structure de l'article
+[00:22:30 - 00:22:37] avec la haute le bloc catégorie de titre ensuite on veut un héros post avec tag h1 post title widget
+[00:22:37 - 00:22:43] donc métaro avec avatar vendoteur date de publication en temps de lecture mais quelque
+[00:22:43 - 00:22:48] chose qui est qualité qui est professionnel on va pas d'un blog ou derrière il y a juste du texte merci
+[00:22:48 - 00:24:40] au revoir et lui ça va c'est pas mal déjà aussi de tout ce que vous avez vu sur la première
+[00:24:40 - 00:24:47] page qui est quand même un mot clé très important agencia il n'y a pas tout le monde qui a un
+[00:24:47 - 00:24:59] blog donc là vous allez vous différencier en 7 8 mois très bien vous faire chaffer avec votre
+[00:24:59 - 00:25:05] blog voilà après on lui demande de faire une image principale on lui demande le sommaire donc
+[00:25:05 - 00:25:18] ça c'est important parce que quand il parle bot c'est pour ça h2 h3 avec enclinice que
+[00:25:18 - 00:25:57] on sait que derrière la facule nous permet nous permet justement d'avoir une bonne position
+[00:25:57 - 00:27:53] c'est ça c'est les agents et si on crée bien structuré pour que google prenne exactement ce
+[00:27:53 - 00:28:01] point là donc articulier trois articles de plate partage social pas de commentaire on s'en fout
+[00:28:01 - 00:28:11] ça c'est pas intéressant parce qu'on sait que personne ne va en mettre exactement classe
+[00:28:11 - 00:31:24] séance qui est complet création de site agence plus l'entreprise plus le blog automatique
+[00:31:24 - 00:31:32] vous pouvez le facturer assez cher si vous avez un bon client parce que vous avez l'expérience
+[00:31:32 - 00:31:36] vous savez le faire parce que vous l'avez fait pour votre propre site ça peut être un point ça
+[00:31:36 - 00:31:48] peut être intéressant c'est pas le blog automatique on va vraiment se baser sur le dit qu'on a fait
+[00:31:48 - 00:33:19] rétester ça peut être une stratégie honnêtement j'ai jamais testé je n'ai pas voulu dire je
+[00:33:19 - 00:33:27] produis un blog automatique de 40 000 articles par jour c'est faisable pour tes chers en API
+[00:33:27 - 00:34:35] agence des pas après mais on sait quand il y a un terme beaucoup de liens externes avec des belles
+[00:34:35 - 00:34:51] images et ensuite des belles redirection aussi intéressant et après au fur et à mesure vous
+[00:34:51 - 00:36:15] le montez ça dépend pas où vous êtes l'article là il n'a même pas de liens de redirection s'il
+[00:36:15 - 00:36:21] en a un là il n'y a même pas de liens interne j'ai l'impression on regarde les images
+[00:36:21 - 00:37:26] elles sont full gpt c'est obligé que derrière une barrière il y avait une limite derrière
+[00:37:26 - 00:37:33] bah si tu voulais créer ton agence ou tu voulais être expérien ou même expérior ou peu importe
+[00:37:33 - 00:37:40] à ce que ça y est pas faire de site bah c'était complexe quoi une merde du piquet avec un template
+[00:37:40 - 00:37:55] etc honnêtement c'est pas compliqué on va être au lettre on n'a pas codé une fois depuis le
+[00:37:55 - 00:38:06] début de la formation on n'a rien fait encore si on va le faire le blog c'est lui qui réfléchit
+[00:38:06 - 00:38:13] ça lui qui fait tout à bien complexe vous avez la capacité d'aller sur le marché et tout manger
+[00:38:13 - 00:38:33] j'ai pas de doute sur ça travail commence à être plus rude entre référencier soit soit vous êtes
+[00:38:33 - 00:38:40] un expert c'est vous le meilleur il vous montrer soit vous différenciez avec vos prises un peu
+[00:38:40 - 00:38:47] importe c'est à vous de sortir votre épreuve du jeu et vraiment de se marcher là parce que dans
+[00:38:47 - 00:38:51] 10 ans on aura encore besoin d'experts d'automatisation parce que les boîtes ont peur de mettre
+[00:38:51 - 00:38:56] les mains dedans alors que finalement il y a un bien complexe je sais qu'au début ça peut faire peur
+[00:38:56 - 00:39:14] de voir un terminal tu vois ouais j'ai jamais testé comment on fait comment l'utilise etc plaisir du
+[00:39:14 - 00:39:23] coup sur le terminal et vous voyez le système quoi il est simple net efficace ok on fait le site
+[00:39:23 - 00:39:28] internet on lui donne un prompt ok on a la logique de faire section par section il doit
+[00:39:28 - 00:39:33] les reproduire à la perfection c'est pas parfait autour du coup sur une phase d'amélioration ok
+[00:39:33 - 00:39:38] le site me convient j'ai tout donc maintenant qu'est ce qu'il faut il faut un blog ok top le blog
+[00:39:38 - 00:39:42] comment je vais le construire ma tout simplement je sais qu'il faut si je sais qu'il faut ça
+[00:39:42 - 00:39:49] du coup construit le moi là on pourrait très bien lui demander des améliorations aussi
+[00:39:49 - 00:39:54] enfin même pas des améliorations c'est qu'à la place avec le blog automatique on pourrait
+[00:39:54 - 00:40:02] faire du SEO programmatique pour créer des pages des centaines de pages automatiquement donc agence
+[00:40:02 - 00:40:09] il y a restauration paris agence il y a restauration marseille et faire tout ça automatiquement avec
+[00:40:09 - 00:41:06] les beaux bouclés comme ça on se positionne sur chacun en 2026 le marché il vient tout juste de
+[00:41:06 - 00:41:17] bouger au niveau de l'IA qui est une mitten là c'est vraiment les modèles qui font tout je
+[00:41:17 - 00:51:56] sais pas il en est à quel pd test résumé donc là ce qu'on peut lui dire ok vous n'aimez pas
+[00:51:56 - 00:54:26] notre notre titre h1 donc le td lr moi je le comprends mais là normalement ça ne
+[00:54:26 - 00:54:31] devrait pas être affiché comme ça ça devrait être résumé manuellement si vous n'êtes pas dans
+[00:54:31 - 00:54:37] la technique à faire codex puisque c'est lui qui l'a créé il se va savoir très bien le faire
+[00:54:37 - 00:54:43] donc c'est pas un problème quand même il a une structure qui est top on a notre f aq qui
+[00:54:43 - 00:54:51] foc sud on a le lien source donc ça les liens de la direction on a l'autre sommaire non
+[00:54:51 - 00:55:50] il n'y a rien à dire honnêtement il n'y a rien à dire on a quand même un article à une fois il
+[00:55:50 - 01:00:37] y a toujours un petit donc c'est top on a l'auteur l'autrice il a plusieurs on a vu qu'on pouvait
+[01:00:37 - 01:01:23] changer le titre des catégories et tickets moi je vais m'éliminer si haut bien sûr le système
+[01:01:23 - 01:02:46] il n'avait pas le fer de m'en est à codex il n'y a pas de soucis il va savoir à jeuny avant
+[01:02:46 - 01:02:54] qu'on quitte la catégorie si je vais voir vu qu'il a été publié accueil tac
+[01:03:00 - 01:03:34] là je vais lui dire encore une fois il cherchait une mot clé tableau superbe ça rend bien les
+[01:03:34 - 01:03:42] cas d'usage de l'audit image ça rend super bien liste à puce aussi par contre il n'y a pas mis
+[01:03:42 - 01:03:49] beaucoup de texte en grave et la liste ça marche la live aq le sommaire franchement honnêtement
+[01:03:49 - 01:05:48] une heure c'est du détail encore une fois du détail ça vous d'ajuster je pense que c'est
+[01:05:48 - 01:05:55] top pour lui demander qui change complètement le design qui l'améliore tout avec ses faits
+[01:05:55 - 01:06:05] maintenant va voir si là il a bien mis résumé c'est top il n'y a rien à dire honnêtement
+[01:06:05 - 01:06:14] j'ai travaillé dans une belle agence si haut et honnêtement là ce qu'on propose c'est même pas
+[01:06:14 - 01:06:23] pour rajouter parce que c'est c'est moi qui c'est qualitatif il n'y a rien à dire en fait il n'y
+[01:06:23 - 01:06:29] a rien à dire on se dit de la prestation ça se facturer des des sommes l'astronomique ça c'est
+[01:06:29 - 01:06:36] fou donc on se reprend tout de suite pour la partie blog automatique donc vraiment n'hésitez pas
+[01:06:36 - 01:06:46] à améliorer et on va voir justement comment faire ça vous allez avoir besoin d'un vps et du coup des
+[01:06:46 - 01:06:47] api pour

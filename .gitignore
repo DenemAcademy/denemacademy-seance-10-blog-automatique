@@ -1,0 +1,10 @@
+.DS_Store
+*.mp4
+*.mov
+*.m4v
+*.m4a
+node_modules/
+.playwright-mcp/
+draft_frames/
+tools/__pycache__/
+10-*/

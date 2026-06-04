@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="fr" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Séance 10 — Blog automatique | DENEM Academy</title>
+  <meta name="description" content="Support complet : créer une structure de blog WordPress avec Codex, Elementor, ACF, Rank Math et une méthode de vérification simple.">
+  <link rel="icon" href="logo-denem.jpeg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f172a;--muted:#475569;--paper:#fff;--blue:#2563eb;--violet:#7c3aed;--green:#32d397;--soft:#f8fafc;--line:#0f172a;--shadow:7px 7px 0 var(--ink);--shadow-sm:4px 4px 0 var(--ink)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;letter-spacing:0;overflow-x:hidden}::selection{background:#dbeafe;color:#0f172a}a{color:inherit}.progress{position:fixed;top:0;left:0;height:6px;background:linear-gradient(90deg,var(--blue),var(--violet),var(--green));z-index:100;width:0}.topbar{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:2px solid var(--ink)}.topbar-inner{max-width:1320px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900}.brand img{width:40px;height:40px;object-fit:cover;border:2px solid var(--ink);box-shadow:var(--shadow-sm)}.brand span{font-family:JetBrains Mono,monospace;font-size:12px;text-transform:uppercase}.nav{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;max-width:760px}.nav a{text-decoration:none;border:2px solid var(--ink);box-shadow:var(--shadow-sm);padding:6px 8px;background:#fff;font-family:JetBrains Mono,monospace;font-size:11px;font-weight:900}.nav a.active{background:var(--ink);color:#fff}.hero-main{position:relative;overflow:hidden;border-bottom:2px solid var(--ink);background:linear-gradient(135deg,#fff 0%,#eff6ff 45%,#f5f3ff 100%)}.hero-main:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(15,23,42,.06) 1px,transparent 1px);background-size:34px 34px}.hero-inner{position:relative;max-width:1320px;margin:auto;padding:72px 18px 56px}.eyebrow{display:inline-flex;background:var(--blue);color:#fff;border:2px solid var(--ink);box-shadow:var(--shadow-sm);padding:8px 12px;font-family:JetBrains Mono,monospace;font-size:12px;font-weight:900;text-transform:uppercase}.hero-main h1{max-width:1000px;font-size:clamp(42px,7vw,86px);line-height:.92;margin:24px 0 20px;font-weight:950}.hero-main p{font-size:20px;line-height:1.75;color:#334155;max-width:900px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.hero-actions a{text-decoration:none;border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:12px 16px;font-weight:900}.hero-actions a:first-child{background:var(--ink);color:#fff}.summary{max-width:1320px;margin:auto;padding:34px 18px;border-bottom:2px solid var(--ink)}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.summary-card{border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:18px;text-decoration:none;transition:transform .18s ease}.summary-card:hover{transform:translate(-2px,-2px)}.summary-card b{font-family:JetBrains Mono,monospace;color:var(--blue)}.summary-card p{font-size:14px;line-height:1.6;color:var(--muted)}main{background:#fff}.section{scroll-margin-top:86px;max-width:1320px;margin:auto;padding:74px 18px;border-bottom:2px solid var(--ink)}.section:nth-child(odd){background-image:linear-gradient(90deg,rgba(37,99,235,.045) 0 1px,transparent 1px),linear-gradient(rgba(124,58,237,.04) 0 1px,transparent 1px);background-size:36px 36px}.split,.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}.meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.meta-row span{border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:6px 9px;font-family:JetBrains Mono,monospace;font-size:11px;font-weight:900;text-transform:uppercase}.meta-row .num{background:var(--blue);color:#fff}.section h2{font-size:clamp(32px,4vw,54px);line-height:1.02;margin:0 0 18px;font-weight:950}.lead{font-size:18px;line-height:1.8;color:#334155;margin:0 0 20px}.shot{border:2px solid var(--ink);box-shadow:var(--shadow);background:#fff;margin:0 0 24px;overflow:hidden}.shot img{display:block;width:100%;height:auto;background:#fff}.shot figcaption{display:flex;gap:10px;align-items:flex-start;border-top:2px solid var(--ink);padding:12px 14px;font-size:13px;line-height:1.5;color:#334155;font-weight:800}.shot figcaption span{font-family:JetBrains Mono,monospace;color:var(--blue)}.note-row,.before-after,.card-grid,.check-grid,.recap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}.note-row div,.before-after div,.card-grid div,.method-box,.tip,.warning,.diagnostic,.recap-grid div{border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:18px}.note-row b,.tip b,.warning b,.diagnostic b,.method-box b{font-family:JetBrains Mono,monospace;text-transform:uppercase;font-size:12px}.note-row p,.card-grid p,.before-after p,.tip p,.warning p,.diagnostic p{line-height:1.65;color:#334155;margin:8px 0 0}.warning{background:#fff7ed}.tip{background:#eff6ff}.diagnostic{background:#111827;color:#fff}.diagnostic p{color:#e5e7eb}.check-grid{grid-template-columns:repeat(4,1fr)}.check-grid label{border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:16px;font-weight:850;line-height:1.35}.check-grid input{width:18px;height:18px;margin-right:8px;accent-color:var(--blue)}.prompt-card{border:2px solid var(--ink);box-shadow:var(--shadow);background:#0b1020;color:#fff;margin:18px 0;overflow:hidden}.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px solid rgba(255,255,255,.25);padding:10px 12px;background:#111827}.prompt-head span{font-family:JetBrains Mono,monospace;text-transform:uppercase;font-size:12px;font-weight:900;color:#bfdbfe}.copy-btn{border:2px solid #fff;background:#fff;color:#0f172a;padding:7px 10px;font-weight:900;cursor:pointer}.copy-btn.copied{background:#bbf7d0}.prompt-card pre{margin:0;padding:20px;white-space:pre-wrap;overflow-x:auto;font-family:JetBrains Mono,monospace;font-size:13px;line-height:1.75}.table-wrap{overflow:auto;border:2px solid var(--ink);box-shadow:var(--shadow-sm);margin-top:22px}table{border-collapse:collapse;width:100%;min-width:720px;background:#fff}th,td{border:2px solid var(--ink);padding:14px;text-align:left;vertical-align:top;line-height:1.55}th{background:var(--ink);color:#fff}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.timeline div{border:2px solid var(--ink);box-shadow:var(--shadow-sm);background:#fff;padding:18px;font-weight:900}.timeline span{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--violet);color:#fff;border:2px solid var(--ink);margin-right:8px;font-family:JetBrains Mono,monospace}blockquote{font-size:clamp(28px,4vw,48px);line-height:1.15;font-weight:950;margin:0 0 22px;padding:24px;border-left:10px solid var(--violet);background:#f5f3ff}.method-box ol{margin:12px 0 0;padding-left:20px;line-height:1.85;color:#334155;font-weight:750}.recap{background:#0f172a;color:#fff;max-width:none}.recap .lead{color:#e2e8f0}.recap-grid{grid-template-columns:repeat(3,1fr);max-width:1100px}.recap-grid div{background:#fff;color:#0f172a;font-weight:900;text-align:center}.assets-list{max-width:1320px;margin:auto;padding:56px 18px;border-bottom:2px solid var(--ink)}.assets-list ol{columns:2;line-height:1.8;color:#334155}.assets-list a{color:var(--blue);font-weight:800}.footer{border-top:2px solid var(--ink);padding:26px 18px;font-family:JetBrains Mono,monospace;font-size:12px;font-weight:900;text-transform:uppercase}.footer-inner{max-width:1320px;margin:auto;display:flex;justify-content:space-between;gap:16px;align-items:center}.reveal{opacity:0;transform:translateY(18px);transition:.45s ease}.reveal.visible{opacity:1;transform:none}@media(max-width:1050px){.summary-grid{grid-template-columns:repeat(2,1fr)}.split,.hero-grid{grid-template-columns:1fr}.check-grid,.timeline,.recap-grid{grid-template-columns:repeat(2,1fr)}.nav{max-width:100%}.topbar-inner{align-items:flex-start;flex-direction:column}}@media(max-width:700px){.hero-inner{padding:46px 16px}.summary-grid,.note-row,.before-after,.card-grid,.check-grid,.timeline,.recap-grid{grid-template-columns:1fr}.section{padding:54px 16px}.shot{box-shadow:var(--shadow-sm)}.prompt-card pre{font-size:12px}.assets-list ol{columns:1}.footer-inner{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top"><img src="logo-denem.jpeg" alt="Logo DENEM Academy"><span>DENEM Academy · Séance 10</span></a>
+      <nav class="nav" aria-label="Navigation sections"><a href="#section-01">01</a><a href="#section-02">02</a><a href="#section-03">03</a><a href="#section-04">04</a><a href="#section-05">05</a><a href="#section-06">06</a><a href="#section-07">07</a><a href="#section-08">08</a><a href="#section-09">09</a><a href="#section-10">10</a><a href="#section-11">11</a><a href="#section-12">12</a><a href="#section-13">13</a><a href="#section-14">14</a><a href="#section-15">15</a><a href="#section-16">16</a><a href="#section-17">17</a><a href="#section-18">18</a><a href="#section-19">19</a><a href="#section-20">20</a><a href="#section-21">21</a><a href="#section-22">22</a><a href="#section-23">23</a><a href="#section-24">24</a><a href="#section-25">25</a><a href="#section-26">26</a><a href="#section-27">27</a><a href="#section-28">28</a><a href="#section-29">29</a><a href="#section-30">30</a><a href="#section-31">31</a><a href="#section-32">32</a><a href="#section-33">33</a><a href="#section-34">34</a><a href="#section-35">35</a><a href="#section-36">36</a><a href="#section-37">37</a><a href="#section-38">38</a><a href="#section-39">39</a><a href="#section-40">40</a><a href="#section-41">41</a><a href="#section-42">42</a><a href="#section-43">43</a><a href="#section-44">44</a><a href="#section-45">45</a><a href="#section-46">46</a><a href="#section-47">47</a><a href="#section-48">48</a><a href="#section-49">49</a><a href="#section-50">50</a><a href="#section-51">51</a><a href="#section-52">52</a><a href="#section-53">53</a><a href="#section-54">54</a><a href="#section-55">55</a><a href="#section-56">56</a><a href="#section-57">57</a><a href="#section-58">58</a><a href="#section-59">59</a><a href="#section-60">60</a><a href="#section-61">61</a><a href="#section-62">62</a><a href="#section-63">63</a><a href="#section-64">64</a><a href="#section-65">65</a><a href="#section-66">66</a><a href="#section-67">67</a><a href="#section-68">68</a><a href="#section-69">69</a><a href="#section-70">70</a><a href="#section-71">71</a><a href="#section-72">72</a><a href="#section-73">73</a><a href="#section-74">74</a><a href="#section-75">75</a><a href="#section-76">76</a><a href="#section-77">77</a><a href="#section-78">78</a><a href="#section-79">79</a><a href="#section-80">80</a></nav>
+    </div>
+  </header>
+  <section class="hero-main">
+    <div class="hero-inner">
+      <span class="eyebrow">Acte 2 · Lancer · Blog automatique</span>
+      <h1>Créer la structure de blog WordPress avec Codex.</h1>
+      <p>Je pars du site RestIA créé avant. Je garde le même système, le même dossier, le même design. Cette fois, je prépare le blog : archive, articles, champs, catégories, SEO, images, vérifications. Le but est simple : tu dois pouvoir refaire la séance sans te perdre.</p>
+      <div class="hero-actions"><a href="#section-01">Commencer</a><a href="#prompts">Prompts à copier</a><a href="#assets">Captures utilisées</a></div>
+    </div>
+  </section>
+  <aside class="summary">
+    <div class="summary-grid">
+      <a class="summary-card" href="#section-01"><b>01</b><h3>Comprendre le but</h3><p>Je ne crée pas un blog pour remplir le menu. Je crée une base de publication IA.</p></a>
+      <a class="summary-card" href="#section-09"><b>02</b><h3>Préparer Codex</h3><p>Je lance Codex au bon endroit et je le connecte à WordPress.</p></a>
+      <a class="summary-card" href="#section-17"><b>03</b><h3>Construire /blog/</h3><p>Je donne une structure d'archive claire : hero, filtres, grid, sidebar.</p></a>
+      <a class="summary-card" href="#section-25"><b>04</b><h3>Construire l'article</h3><p>Je crée le template Single Post avec les blocs utiles.</p></a>
+      <a class="summary-card" href="#section-40"><b>05</b><h3>Structurer les champs</h3><p>ACF, Rank Math, catégories, slug, image mise en avant.</p></a>
+      <a class="summary-card" href="#section-50"><b>06</b><h3>Tester le contenu</h3><p>Je publie seulement après preview et contrôle.</p></a>
+      <a class="summary-card" href="#section-64"><b>07</b><h3>Vérifier</h3><p>Desktop, mobile, admin, liens, statuts et rapport.</p></a>
+      <a class="summary-card" href="#section-74"><b>08</b><h3>Industrialiser</h3><p>Je transforme la séance en méthode réutilisable.</p></a>
+    </div>
+  </aside>
+  <main>
+
+    <section id="section-01" class="section hero" data-section="1">
+      <div class="hero-grid">
+        <div>
+      <div class="meta-row">
+        <span class="num">01</span>
+        <span>hero</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le blog n&#x27;est pas un bonus</h2><p class="lead">Je ne crée pas un blog pour remplir un menu. Je crée un endroit où mon système peut publier des contenus utiles, tester des sujets, pousser mes offres et construire de l&#x27;autorité. Si mon site RestIA explique ce que je vends, le blog explique pourquoi mes solutions ont du sens.</p>
+          <div class="hero-actions"><a href="#section-09">Commencer</a><a href="#prompts">Prompts</a><a href="#section-80">Checklist finale</a></div>
+        </div>
+        
+      <figure class="shot">
+        <img src="img/session-10/07-pagespeed-check.jpg" alt="Je pense aux performances et au SEO dès la structure." loading="lazy">
+        <figcaption><span>Capture 07</span>Je pense aux performances et au SEO dès la structure.</figcaption>
+      </figure>
+    
+      </div>
+    </section>
+
+    <section id="section-02" class="section" data-section="2">
+      
+      <div class="meta-row">
+        <span class="num">02</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le point de départ : mon-business</h2><p class="lead">Je garde le même dossier de travail que dans les séances précédentes. Le dossier mon-business évite de mélanger les fichiers de marque, de marché, de site, de blog, de prospection et de clients. Pour cette séance je pars de 02-site, parce que le blog se construit dans le WordPress déjà en place.</p>
+      <figure class="shot">
+        <img src="img/session-10/01-intro-blog-site.jpg" alt="Je pose le sujet : le blog devient la base de publication du site." loading="lazy">
+        <figcaption><span>Capture 01</span>Je pose le sujet : le blog devient la base de publication du site.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-03" class="section split" data-section="3">
+      <div>
+      <div class="meta-row">
+        <span class="num">03</span>
+        <span>method</span>
+        <span>pratique</span>
+      </div>
+    <h2>Pourquoi je travaille dans 02-site</h2><p class="lead">Le blog n&#x27;est pas séparé du site. Il doit reprendre la charte, la navbar, le footer, les couleurs et les boutons déjà créés. Si je lançais Codex dans un autre dossier, il perdrait une partie du contexte et il pourrait produire un blog qui ne ressemble pas au reste.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-04" class="section" data-section="4">
+      
+      <div class="meta-row">
+        <span class="num">04</span>
+        <span>cards</span>
+        <span>méthode</span>
+      </div>
+    <h2>Ce que je veux à la fin</h2><p class="lead">Je veux trois choses simples : une page /blog/ qui liste les articles, un template d&#x27;article qui affiche chaque contenu proprement, et une méthode pour publier sans refaire le design à chaque fois. Une fois le système prêt, chaque nouvel article doit tomber dans la bonne structure tout seul.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-05" class="section quote-layout" data-section="5">
+      
+      <div class="meta-row">
+        <span class="num">05</span>
+        <span>quote</span>
+        <span>vérification</span>
+      </div>
+    <blockquote>Ce n&#x27;est pas une séance WordPress classique. La vraie compétence, c&#x27;est de savoir donner une mission complète à un agent : contexte, accès, structure attendue, preuves de réussite, pièges à éviter. Codex ne doit pas deviner. Je le guide comme un exécutant technique.</blockquote><h2>La logique IA derrière la séance</h2>
+      <p class="lead">Je garde cette idée en tête pendant toute la séance : un blog utile se construit avec une méthode, pas avec une succession de clics.</p>
+      <figure class="shot">
+        <img src="img/session-10/02-wordpress-site-reference.jpg" alt="Je pars du site RestIA existant, pas d&#x27;un écran vide." loading="lazy">
+        <figcaption><span>Capture 02</span>Je pars du site RestIA existant, pas d&#x27;un écran vide.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-06" class="section" data-section="6">
+      
+      <div class="meta-row">
+        <span class="num">06</span>
+        <span>before</span>
+        <span>pratique</span>
+      </div>
+    <h2>Je ne cherche pas à tout automatiser tout de suite</h2><p class="lead">Avant de publier 100 articles automatiquement, je vérifie que le blog peut recevoir un seul article correctement. C&#x27;est le bon ordre. D&#x27;abord la coquille. Ensuite le contenu. Ensuite l&#x27;automatisation.</p>
+      <div class="before-after"><div><b>Avant</b><p>Une demande floue, un site qui peut casser, et un agent qui improvise.</p></div><div><b>Après</b><p>Un chemin clair : contexte, prompt, exécution, contrôle, correction.</p></div></div>
+    </section>
+
+    <section id="section-07" class="section split" data-section="7">
+      <div>
+      <div class="meta-row">
+        <span class="num">07</span>
+        <span>story</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le fil rouge RestIA</h2><p class="lead">Je garde le même exemple : RestIA, un site pour aider les restaurants avec l&#x27;IA. Le blog doit servir ce business. Les articles ne doivent pas être génériques. Ils doivent parler d&#x27;appels manqués, de réservations, d&#x27;avis clients, de menus, de service, de visibilité et d&#x27;automatisations utiles.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-08" class="section" data-section="8">
+      
+      <div class="meta-row">
+        <span class="num">08</span>
+        <span>check</span>
+        <span>vérification</span>
+      </div>
+    <h2>Ce que tu vas refaire</h2><p class="lead">Tu vas ouvrir ton projet, lancer Codex dans le bon dossier, le connecter à WordPress, lui donner un prompt précis, vérifier les pages créées, tester un article, régler les catégories, puis publier proprement. Chaque étape a une preuve observable.</p>
+      <div class="check-grid">
+        <label><input type="checkbox"> Je sais quoi ouvrir</label>
+        <label><input type="checkbox"> Je sais quoi demander</label>
+        <label><input type="checkbox"> Je sais quelle preuve regarder</label>
+        <label><input type="checkbox"> Je sais quoi corriger si ça bloque</label>
+      </div>
+    </section>
+
+    <section id="section-09" class="section split" data-section="9">
+      <div>
+      <div class="meta-row">
+        <span class="num">09</span>
+        <span>terminal</span>
+        <span>pratique</span>
+      </div>
+    <h2>Préparer le dossier avant Codex</h2><p class="lead">Avant de demander quoi que ce soit, je vérifie que je suis dans le dossier du site. Si je travaille dans le mauvais dossier, Codex peut créer des rapports, des fichiers ou des notes au mauvais endroit. Ce n&#x27;est pas grave, mais ça rend la suite confuse.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+      <figure class="shot">
+        <img src="img/session-10/02-wordpress-site-reference.jpg" alt="Je pars du site RestIA existant, pas d&#x27;un écran vide." loading="lazy">
+        <figcaption><span>Capture 02</span>Je pars du site RestIA existant, pas d&#x27;un écran vide.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-10" class="section split" data-section="10">
+      <div>
+      <div class="meta-row">
+        <span class="num">10</span>
+        <span>prompt</span>
+        <span>méthode</span>
+      </div>
+    <h2>Lancer Codex dans le bon contexte</h2><p class="lead">Dans la séance, je lance Codex en mode terminal depuis le dossier 02-site. Le but est qu&#x27;il comprenne l&#x27;environnement local et qu&#x27;il puisse écrire ses fichiers de rapport au même endroit que le projet.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>connecte toi a mon site stp en mcp https://restia.fun/wp-admin/post.php?post=254&amp;action=elementor</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-11" class="section" data-section="11">
+      
+      <div class="meta-row">
+        <span class="num">11</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>Ce que Codex voit au lancement</h2><p class="lead">Codex affiche le modèle, le dossier courant et les permissions. Je vérifie ces trois lignes. Si le dossier n&#x27;est pas le bon, je coupe et je relance. C&#x27;est plus propre que de corriger après.</p>
+      <figure class="shot">
+        <img src="img/session-10/03-prompt-analyse-contexte.jpg" alt="Je prépare un prompt long pour que Codex analyse le contexte." loading="lazy">
+        <figcaption><span>Capture 03</span>Je prépare un prompt long pour que Codex analyse le contexte.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-12" class="section split warning-layout" data-section="12">
+      <div>
+      <div class="meta-row">
+        <span class="num">12</span>
+        <span>warning</span>
+        <span>pratique</span>
+      </div>
+    <h2>Le mode YOLO demande de la responsabilité</h2><p class="lead">Quand j&#x27;autorise Codex à travailler sans me demander chaque permission, je gagne du temps. Mais je dois être sûr du dossier et de la mission. Ce mode est utile dans un projet de confiance, pas dans un dossier rempli de fichiers sensibles.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-13" class="section split" data-section="13">
+      <div>
+      <div class="meta-row">
+        <span class="num">13</span>
+        <span>method</span>
+        <span>méthode</span>
+      </div>
+    <h2>La connexion MCP vers WordPress</h2><p class="lead">Je donne l&#x27;URL WordPress à Codex pour qu&#x27;il puisse ouvrir le site via le navigateur. Le MCP sert à piloter Chrome : ouvrir une page, cliquer, lire l&#x27;interface, récupérer un snapshot et vérifier visuellement.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+      <figure class="shot">
+        <img src="img/session-10/04-prompt-phases-blog.jpg" alt="Je découpe la mission en phases pour forcer la réflexion." loading="lazy">
+        <figcaption><span>Capture 04</span>Je découpe la mission en phases pour forcer la réflexion.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-14" class="section diagnostic-layout" data-section="14">
+      
+      <div class="meta-row">
+        <span class="num">14</span>
+        <span>diagnostic</span>
+        <span>vérification</span>
+      </div>
+    <h2>Pourquoi je donne une URL précise</h2><p class="lead">Je ne dis pas seulement : connecte-toi à mon site. Je donne une URL exacte. Dans la capture, l&#x27;URL pointe vers l&#x27;éditeur Elementor d&#x27;une page. Codex gagne du temps parce qu&#x27;il arrive directement au bon endroit.</p>
+      <div class="diagnostic"><b>Diagnostic rapide</b><p>Si cette étape bloque, demande-toi : suis-je dans le bon dossier ? la bonne page ? le bon statut WordPress ? le bon écran public ?</p></div>
+    </section>
+
+    <section id="section-15" class="section" data-section="15">
+      
+      <div class="meta-row">
+        <span class="num">15</span>
+        <span>image</span>
+        <span>pratique</span>
+      </div>
+    <h2>Première preuve : WordPress répond</h2><p class="lead">La première preuve n&#x27;est pas que Codex écrit beaucoup de texte. La preuve, c&#x27;est que WordPress s&#x27;ouvre, que la session est active, et que la page ou l&#x27;admin est visible.</p>
+      <figure class="shot">
+        <img src="img/session-10/04-prompt-phases-blog.jpg" alt="Je découpe la mission en phases pour forcer la réflexion." loading="lazy">
+        <figcaption><span>Capture 04</span>Je découpe la mission en phases pour forcer la réflexion.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-16" class="section split warning-layout" data-section="16">
+      <div>
+      <div class="meta-row">
+        <span class="num">16</span>
+        <span>warning</span>
+        <span>méthode</span>
+      </div>
+    <h2>Je garde mes accès sous contrôle</h2><p class="lead">Si une connexion est nécessaire, je peux la faire moi-même. Codex n&#x27;a pas besoin de voir mes mots de passe. Une fois connecté, il peut travailler dans la session active.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-17" class="section split" data-section="17">
+      <div>
+      <div class="meta-row">
+        <span class="num">17</span>
+        <span>prompt</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le prompt de construction doit être concret</h2><p class="lead">Je ne demande pas : fais-moi un blog. Je décris exactement l&#x27;archive, les filtres, les cartes, la pagination, la sidebar et l&#x27;état vide. Plus le prompt est précis, moins Codex invente.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <figure class="shot">
+        <img src="img/session-10/05-structure-template-article.jpg" alt="Je détaille le template d&#x27;article avant de demander l&#x27;exécution." loading="lazy">
+        <figcaption><span>Capture 05</span>Je détaille le template d&#x27;article avant de demander l&#x27;exécution.</figcaption>
+      </figure>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Tu es un lead developer WordPress + Elementor Pro et un expert SEO/GEO.
+Tu as acces au Chrome MCP. Utilise-le pour regarder mon site et verifier le rendu.
+
+Contexte :
+J&#x27;ai deja construit mon site RestIA en Elementor : accueil, solutions, contact, header et footer.
+Maintenant je veux monter la partie blog.
+Attention : je ne veux pas encore produire des dizaines d&#x27;articles.
+Je veux preparer la structure propre qui va recevoir les articles ensuite.
+
+Mission :
+1. Creer la page archive /blog/.
+2. Creer le template Single Post pour tous les articles.
+3. Installer ou verifier les bons plugins.
+4. Creer les categories et les champs ACF.
+5. Tester avec des articles factices, puis remettre les tests en brouillon.
+
+Travaille en 5 phases.
+Avant chaque phase, ecris ce que tu vas faire.
+Apres chaque phase, ecris ce que tu as produit et ce que tu as appris.
+
+PHASE 1 - Discovery
+- Crawle la home, les pages principales, le header et le footer.
+- Extrais la palette, les typos, les espacements, les bordures, les radius, les ombres, les animations et le ton.
+- Note les composants Elementor deja presents.
+- Cree discovery.md, design-tokens.json et seo-stack.md.
+
+PHASE 2 - Prerequis WordPress
+- Verifie ou installe Rank Math Free.
+- Verifie ou installe ACF Free.
+- Verifie ou installe ACF to REST API.
+- Verifie ou installe Smush ou un plugin de compression image.
+- Cree des categories propres selon le secteur. Ne cree pas categorie-1, categorie-2, etc.
+- Cree des tags utiles : Agent IA, Automatisation, News IA.
+- Cree les champs article :
+  - en_resume
+  - temps_lecture
+  - niveau
+  - faq
+  - sources
+  - mise_a_jour_manuelle
+
+PHASE 3 - Template Single Post
+Construis dans Elementor Theme Builder -&gt; Single Post.
+Condition : tous les posts.
+Structure :
+1. Breadcrumb.
+2. Hero post avec tag categorie, H1, extrait, avatar, auteur, date, temps de lecture, niveau.
+3. Image mise en avant en 16:9.
+4. Bloc en_resume si le champ est rempli.
+5. Sommaire sticky sur desktop.
+6. Contenu article avec H2, H3, callouts, tableaux responsive, images et captions.
+7. FAQ si le champ est rempli.
+8. Sources si le champ est rempli.
+9. Bloc auteur.
+10. CTA contextualise.
+11. Articles lies.
+12. Partage LinkedIn, X et copier le lien.
+13. Pas de commentaires.
+
+PHASE 4 - Archive /blog/
+Construis dans Elementor Theme Builder -&gt; Archive.
+Condition : Posts Archive.
+Structure :
+1. Hero archive compact avec H1, baseline et recherche.
+2. Article epingle optionnel.
+3. Filtres categories en pills.
+4. Grid articles : 3 colonnes desktop, 2 tablette, 1 mobile.
+5. Card avec image 4:3, categorie, titre 2 lignes max, extrait 2 lignes max, date et temps de lecture.
+6. Pagination numerotee, pas de load more.
+7. Sidebar : newsletter, articles recents, tags.
+8. Etat vide propre si aucun article n&#x27;est publie.
+
+PHASE 5 - Verification
+- Cree 2 posts factices avec image, categorie et champs remplis.
+- Verifie /blog/.
+- Clique sur un article et verifie le template.
+- Verifie mobile 375px.
+- Verifie Lighthouse sur archive et single post.
+- Verifie le schema si possible.
+- Remets les posts factices en brouillon.
+
+Rapport final :
+Cree RAPPORT.md avec les plugins, les champs, les categories, les captures, les scores, les corrections et la prochaine etape.
+
+GO.</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-18" class="section split" data-section="18">
+      <div>
+      <div class="meta-row">
+        <span class="num">18</span>
+        <span>story</span>
+        <span>pratique</span>
+      </div>
+    <h2>L&#x27;archive /blog/ sert de hub</h2><p class="lead">La page /blog/ est la porte d&#x27;entrée du contenu. Elle doit être simple : un titre, une recherche, des catégories, une grille d&#x27;articles, une pagination. L&#x27;utilisateur doit comprendre où cliquer en moins de cinq secondes.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-19" class="section" data-section="19">
+      
+      <div class="meta-row">
+        <span class="num">19</span>
+        <span>cards</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le rôle de l&#x27;article épinglé</h2><p class="lead">L&#x27;article épinglé n&#x27;est pas obligatoire. Il sert à mettre en avant un contenu fort : un guide, une étude, un audit, une offre de lead magnet. Si tu n&#x27;as rien d&#x27;important, tu laisses l&#x27;état vide propre.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-20" class="section" data-section="20">
+      
+      <div class="meta-row">
+        <span class="num">20</span>
+        <span>table</span>
+        <span>vérification</span>
+      </div>
+    <h2>Les filtres catégories</h2><p class="lead">Les catégories doivent aider à naviguer. Sur RestIA, je peux avoir Guides, Cas d&#x27;usage, Actualités IA, Automatisation, Restaurant. Ce ne sont pas des catégories décoratives : elles aident le lecteur à trouver ce qui l&#x27;intéresse.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-21" class="section split warning-layout" data-section="21">
+      <div>
+      <div class="meta-row">
+        <span class="num">21</span>
+        <span>warning</span>
+        <span>pratique</span>
+      </div>
+    <h2>Pourquoi pas categorie-1</h2><p class="lead">Une catégorie nommée categorie-1 ne parle à personne. Si Codex crée ce genre de nom, je corrige. Un blog professionnel utilise des catégories lisibles, même si le contenu est encore vide.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+      <figure class="shot">
+        <img src="img/session-10/21-report-terminal.jpg" alt="Le rapport terminal donne la trace de ce qui a été fait." loading="lazy">
+        <figcaption><span>Capture 21</span>Le rapport terminal donne la trace de ce qui a été fait.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-22" class="section" data-section="22">
+      
+      <div class="meta-row">
+        <span class="num">22</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>La grille d&#x27;articles</h2><p class="lead">La grille doit être régulière. Une card trop haute casse le rythme. Je demande donc une image en ratio fixe, un titre limité à deux lignes, un extrait limité, et un footer stable avec date et temps de lecture.</p>
+      <figure class="shot">
+        <img src="img/session-10/18-elementor-context.jpg" alt="Elementor sert de contexte visuel pour reproduire le style." loading="lazy">
+        <figcaption><span>Capture 18</span>Elementor sert de contexte visuel pour reproduire le style.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-23" class="section" data-section="23">
+      
+      <div class="meta-row">
+        <span class="num">23</span>
+        <span>check</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le mobile compte dès maintenant</h2><p class="lead">Le blog peut être joli sur desktop et cassé sur mobile. Je vérifie vite : 375px, une colonne, aucun texte qui déborde, pas de sidebar trop large, pas de bouton coupé.</p>
+      <div class="check-grid">
+        <label><input type="checkbox"> Je sais quoi ouvrir</label>
+        <label><input type="checkbox"> Je sais quoi demander</label>
+        <label><input type="checkbox"> Je sais quelle preuve regarder</label>
+        <label><input type="checkbox"> Je sais quoi corriger si ça bloque</label>
+      </div>
+    </section>
+
+    <section id="section-24" class="section quote-layout" data-section="24">
+      
+      <div class="meta-row">
+        <span class="num">24</span>
+        <span>quote</span>
+        <span>pratique</span>
+      </div>
+    <blockquote>Au début il n&#x27;y a pas forcément d&#x27;article publié. Une page vide peut faire amateur. Je veux un message propre : Bientôt - premiers articles en préparation. C&#x27;est mieux qu&#x27;une grille cassée ou une page blanche.</blockquote><h2>L&#x27;état vide est important</h2>
+      <p class="lead">Je garde cette idée en tête pendant toute la séance : un blog utile se construit avec une méthode, pas avec une succession de clics.</p>
+    </section>
+
+    <section id="section-25" class="section" data-section="25">
+      
+      <div class="meta-row">
+        <span class="num">25</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le template Single Post</h2><p class="lead">Un article WordPress ne doit pas dépendre d&#x27;une mise en page faite à la main à chaque fois. Le Single Post template donne une structure automatique : titre, image, contenu, sommaire, FAQ, sources, CTA.</p>
+      <figure class="shot">
+        <img src="img/session-10/09-codex-wordpress-working.jpg" alt="Codex pilote WordPress et continue les vérifications." loading="lazy">
+        <figcaption><span>Capture 09</span>Codex pilote WordPress et continue les vérifications.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-26" class="section split" data-section="26">
+      <div>
+      <div class="meta-row">
+        <span class="num">26</span>
+        <span>method</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le titre doit porter le sujet</h2><p class="lead">Sur un article, le H1 est central. Il sert au lecteur, au SEO et au modèle IA qui analysera la page. Je veux un titre clair, pas un titre vague comme Article test.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+      <figure class="shot">
+        <img src="img/session-10/14-blog-archive-empty.jpg" alt="L&#x27;archive /blog/ montre la structure de cartes et de sidebar." loading="lazy">
+        <figcaption><span>Capture 14</span>L&#x27;archive /blog/ montre la structure de cartes et de sidebar.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-27" class="section" data-section="27">
+      
+      <div class="meta-row">
+        <span class="num">27</span>
+        <span>cards</span>
+        <span>pratique</span>
+      </div>
+    <h2>Le breadcrumb donne le contexte</h2><p class="lead">Le fil d&#x27;Ariane aide le lecteur à comprendre où il est : Accueil &gt; Blog &gt; Catégorie &gt; Article. Il aide aussi Google à comprendre la structure du site.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-28" class="section diagnostic-layout" data-section="28">
+      
+      <div class="meta-row">
+        <span class="num">28</span>
+        <span>diagnostic</span>
+        <span>méthode</span>
+      </div>
+    <h2>L&#x27;extrait n&#x27;est pas optionnel</h2><p class="lead">L&#x27;extrait donne une phrase d&#x27;intention sous le titre. Il sert aussi aux cards d&#x27;archive. Si l&#x27;extrait est vide, WordPress peut prendre un bout de texte au hasard.</p>
+      <div class="diagnostic"><b>Diagnostic rapide</b><p>Si cette étape bloque, demande-toi : suis-je dans le bon dossier ? la bonne page ? le bon statut WordPress ? le bon écran public ?</p></div>
+    </section>
+
+    <section id="section-29" class="section" data-section="29">
+      
+      <div class="meta-row">
+        <span class="num">29</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>L&#x27;image mise en avant</h2><p class="lead">L&#x27;image mise en avant doit être choisie, pas laissée vide. Elle apparaît dans l&#x27;article, dans la card, parfois dans le partage social. Elle donne le premier signal visuel.</p>
+      <figure class="shot">
+        <img src="img/session-10/22-seo-article-request.jpg" alt="Je teste ensuite avec un vrai sujet SEO plus long." loading="lazy">
+        <figcaption><span>Capture 22</span>Je teste ensuite avec un vrai sujet SEO plus long.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-30" class="section" data-section="30">
+      
+      <div class="meta-row">
+        <span class="num">30</span>
+        <span>image</span>
+        <span>pratique</span>
+      </div>
+    <h2>La médiathèque</h2><p class="lead">Je range les visuels dans la médiathèque WordPress. L&#x27;objectif n&#x27;est pas d&#x27;avoir une belle galerie. L&#x27;objectif est de pouvoir réutiliser les images au bon endroit, avec un alt propre.</p>
+      <figure class="shot">
+        <img src="img/session-10/23-final-article-check.jpg" alt="Je finis par une vérification visuelle de l&#x27;article publié." loading="lazy">
+        <figcaption><span>Capture 23</span>Je finis par une vérification visuelle de l&#x27;article publié.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-31" class="section" data-section="31">
+      
+      <div class="meta-row">
+        <span class="num">31</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le contenu de l&#x27;article</h2><p class="lead">Le corps de l&#x27;article doit avoir des H2, des paragraphes courts, des exemples, des tableaux si utile, et des callouts. Le template doit rendre tout ça lisible sans retoucher le design.</p>
+      <figure class="shot">
+        <img src="img/session-10/10-single-post-test.jpg" alt="Le premier article test valide le template Single Post." loading="lazy">
+        <figcaption><span>Capture 10</span>Le premier article test valide le template Single Post.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-32" class="section" data-section="32">
+      
+      <div class="meta-row">
+        <span class="num">32</span>
+        <span>cards</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le sommaire</h2><p class="lead">Le sommaire permet de naviguer dans un article long. Sur desktop, il peut rester à droite. Sur mobile, il doit se placer au-dessus ou disparaître proprement.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-33" class="section" data-section="33">
+      
+      <div class="meta-row">
+        <span class="num">33</span>
+        <span>table</span>
+        <span>pratique</span>
+      </div>
+    <h2>Les callouts</h2><p class="lead">Je veux trois types de blocs : info, attention, conseil. Ils rendent l&#x27;article plus lisible et évitent les murs de texte. Codex peut les prévoir dans le CSS du template.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-34" class="section" data-section="34">
+      
+      <div class="meta-row">
+        <span class="num">34</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>La fin de l&#x27;article doit vendre sans forcer</h2><p class="lead">Un article doit finir par une action logique : réserver un audit, lire une page service, télécharger un guide, demander un devis. Le CTA doit être lié au sujet, pas collé au hasard.</p>
+      <figure class="shot">
+        <img src="img/session-10/11-acf-fields-wordpress.jpg" alt="Les champs ACF rendent l&#x27;article plus professionnel." loading="lazy">
+        <figcaption><span>Capture 11</span>Les champs ACF rendent l&#x27;article plus professionnel.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-35" class="section split" data-section="35">
+      <div>
+      <div class="meta-row">
+        <span class="num">35</span>
+        <span>method</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le partage social</h2><p class="lead">Je garde LinkedIn, X et copier le lien. Sur un blog B2B, c&#x27;est souvent plus utile que de mettre dix réseaux sociaux qui ne seront jamais utilisés.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-36" class="section" data-section="36">
+      
+      <div class="meta-row">
+        <span class="num">36</span>
+        <span>cards</span>
+        <span>pratique</span>
+      </div>
+    <h2>Le bloc auteur</h2><p class="lead">Le bloc auteur rassure. Il montre qui écrit, quel est le rôle, et pourquoi la personne est crédible. C&#x27;est utile pour l&#x27;E-E-A-T et pour la lecture humaine.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-37" class="section split" data-section="37">
+      <div>
+      <div class="meta-row">
+        <span class="num">37</span>
+        <span>story</span>
+        <span>méthode</span>
+      </div>
+    <h2>Les articles liés</h2><p class="lead">Les articles liés créent du maillage interne. Ils gardent le lecteur sur le site et aident Google à comprendre les groupes de sujets.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-38" class="section" data-section="38">
+      
+      <div class="meta-row">
+        <span class="num">38</span>
+        <span>table</span>
+        <span>vérification</span>
+      </div>
+    <h2>La FAQ</h2><p class="lead">La FAQ répond aux questions simples que le lecteur se pose. Elle peut aussi nourrir le schema FAQPage si le site le gère proprement.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-39" class="section split warning-layout" data-section="39">
+      <div>
+      <div class="meta-row">
+        <span class="num">39</span>
+        <span>warning</span>
+        <span>pratique</span>
+      </div>
+    <h2>Les sources</h2><p class="lead">Les sources externes évitent de faire croire que tout sort de nulle part. Pour un article sérieux, je veux au moins quelques liens utiles, vérifiés, et pas seulement du texte généré.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-40" class="section" data-section="40">
+      
+      <div class="meta-row">
+        <span class="num">40</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>Les champs ACF</h2><p class="lead">Les champs ACF permettent de structurer l&#x27;article sans écrire du code à chaque fois. TL;DR, temps de lecture, niveau, date de mise à jour, FAQ, sources : tout devient plus propre.</p>
+      <figure class="shot">
+        <img src="img/session-10/15-wordpress-admin-pages.jpg" alt="Je contrôle l&#x27;admin WordPress pour vérifier les pages et contenus." loading="lazy">
+        <figcaption><span>Capture 15</span>Je contrôle l&#x27;admin WordPress pour vérifier les pages et contenus.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-41" class="section split" data-section="41">
+      <div>
+      <div class="meta-row">
+        <span class="num">41</span>
+        <span>method</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le TL;DR</h2><p class="lead">Le TL;DR doit résumer l&#x27;article en deux ou trois lignes. C&#x27;est très utile pour le lecteur pressé. Je le place en haut de l&#x27;article pour qu&#x27;il comprenne vite l&#x27;intérêt.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-42" class="section" data-section="42">
+      
+      <div class="meta-row">
+        <span class="num">42</span>
+        <span>cards</span>
+        <span>pratique</span>
+      </div>
+    <h2>Le temps de lecture</h2><p class="lead">Le temps de lecture donne une attente. Si l&#x27;article est long, le lecteur sait dans quoi il s&#x27;engage. C&#x27;est simple, mais ça rend le blog plus professionnel.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-43" class="section" data-section="43">
+      
+      <div class="meta-row">
+        <span class="num">43</span>
+        <span>table</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le niveau</h2><p class="lead">Le champ niveau évite de mélanger les contenus débutants et avancés. Sur RestIA, un restaurateur doit savoir si l&#x27;article est accessible ou technique.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-44" class="section split warning-layout" data-section="44">
+      <div>
+      <div class="meta-row">
+        <span class="num">44</span>
+        <span>warning</span>
+        <span>vérification</span>
+      </div>
+    <h2>La date de mise à jour</h2><p class="lead">Un article IA vieillit vite. Je veux pouvoir montrer qu&#x27;un contenu a été revu. C&#x27;est utile pour la confiance et pour éviter les guides obsolètes.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-45" class="section" data-section="45">
+      
+      <div class="meta-row">
+        <span class="num">45</span>
+        <span>image</span>
+        <span>pratique</span>
+      </div>
+    <h2>Les permaliens</h2><p class="lead">Je règle les permaliens sur Titre de la publication. Une URL comme /intelligence-artificielle-restaurant/ est plus claire que /?p=123.</p>
+      <figure class="shot">
+        <img src="img/session-10/19-template-hero-notes.jpg" alt="Je précise le hero article, la catégorie et la méta row." loading="lazy">
+        <figcaption><span>Capture 19</span>Je précise le hero article, la catégorie et la méta row.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-46" class="section diagnostic-layout" data-section="46">
+      
+      <div class="meta-row">
+        <span class="num">46</span>
+        <span>diagnostic</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le slug</h2><p class="lead">Le slug doit être court, lisible, sans accents, sans mots inutiles. Je ne laisse pas WordPress créer un slug trop long si le titre est long.</p>
+      <div class="diagnostic"><b>Diagnostic rapide</b><p>Si cette étape bloque, demande-toi : suis-je dans le bon dossier ? la bonne page ? le bon statut WordPress ? le bon écran public ?</p></div>
+      <figure class="shot">
+        <img src="img/session-10/22-seo-article-request.jpg" alt="Je teste ensuite avec un vrai sujet SEO plus long." loading="lazy">
+        <figcaption><span>Capture 22</span>Je teste ensuite avec un vrai sujet SEO plus long.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-47" class="section" data-section="47">
+      
+      <div class="meta-row">
+        <span class="num">47</span>
+        <span>cards</span>
+        <span>vérification</span>
+      </div>
+    <h2>Rank Math</h2><p class="lead">Rank Math sert à gérer le SEO de base : title, meta description, sitemap, breadcrumbs, schema. Je ne l&#x27;utilise pas comme décoration. Il sert à contrôler le signal envoyé.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-48" class="section split" data-section="48">
+      <div>
+      <div class="meta-row">
+        <span class="num">48</span>
+        <span>method</span>
+        <span>pratique</span>
+      </div>
+    <h2>Smush ou compression image</h2><p class="lead">Un blog peut devenir lourd si chaque image fait plusieurs Mo. Je compresse les images et je vérifie qu&#x27;elles chargent correctement.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-49" class="section" data-section="49">
+      
+      <div class="meta-row">
+        <span class="num">49</span>
+        <span>table</span>
+        <span>méthode</span>
+      </div>
+    <h2>ACF to REST API</h2><p class="lead">Ce plugin peut aider si Codex doit lire ou remplir des champs personnalisés via l&#x27;API. Il rend les champs plus accessibles aux automatisations.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-50" class="section" data-section="50">
+      
+      <div class="meta-row">
+        <span class="num">50</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>Créer des articles factices</h2><p class="lead">Avant de publier de vrais articles, je crée des brouillons ou des articles de test. Ils servent à vérifier les cards, les catégories, le single template et les champs.</p>
+      <figure class="shot">
+        <img src="img/session-10/13-single-post-content-table.jpg" alt="Le contenu long doit rester lisible avec sommaire et tableaux." loading="lazy">
+        <figcaption><span>Capture 13</span>Le contenu long doit rester lisible avec sommaire et tableaux.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-51" class="section split warning-layout" data-section="51">
+      <div>
+      <div class="meta-row">
+        <span class="num">51</span>
+        <span>warning</span>
+        <span>pratique</span>
+      </div>
+    <h2>Pourquoi je repasse les tests en brouillon</h2><p class="lead">Un article factice ne doit pas rester public. Une fois la vérification terminée, je le remets en brouillon ou je le supprime. Le site public doit rester propre.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-52" class="section" data-section="52">
+      
+      <div class="meta-row">
+        <span class="num">52</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>Créer un premier article réel</h2><p class="lead">Une fois la structure prête, je peux créer un article réel. Dans la capture, le titre AGENT IA VISIO montre l&#x27;étape de démarrage : je pose le sujet, puis je remplis le contenu et les champs.</p>
+      <figure class="shot">
+        <img src="img/session-10/14-blog-archive-empty.jpg" alt="L&#x27;archive /blog/ montre la structure de cartes et de sidebar." loading="lazy">
+        <figcaption><span>Capture 14</span>L&#x27;archive /blog/ montre la structure de cartes et de sidebar.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-53" class="section split" data-section="53">
+      <div>
+      <div class="meta-row">
+        <span class="num">53</span>
+        <span>prompt</span>
+        <span>vérification</span>
+      </div>
+    <h2>Utiliser ChatGPT pour un test simple</h2><p class="lead">Je peux demander à ChatGPT un article de test pour voir si le template fonctionne. Ce n&#x27;est pas encore une stratégie éditoriale complète. C&#x27;est juste un test d&#x27;affichage.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <figure class="shot">
+        <img src="img/session-10/16-prompt-copy-full.jpg" alt="Le prompt complet précise les livrables et les variables." loading="lazy">
+        <figcaption><span>Capture 16</span>Le prompt complet précise les livrables et les variables.</figcaption>
+      </figure>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Fais-moi un article sur l&#x27;intelligence artificielle pour tester mon blog.
+Je veux un contenu simple, clair, avec une introduction, des H2, des exemples, une FAQ courte et une conclusion.
+Garde un style naturel. Le but est de voir si mon template WordPress affiche bien un article complet.</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-54" class="section split" data-section="54">
+      <div>
+      <div class="meta-row">
+        <span class="num">54</span>
+        <span>prompt</span>
+        <span>pratique</span>
+      </div>
+    <h2>Demander un article SEO plus long</h2><p class="lead">Quand le template est prêt, je peux demander un article plus long avec des tableaux, des listes, des liens et des images. Le but est de tester la structure complète, pas de publier n&#x27;importe quoi.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <figure class="shot">
+        <img src="img/session-10/12-gutenberg-article-published.jpg" alt="Je vérifie le statut, le slug et l&#x27;image mise en avant." loading="lazy">
+        <figcaption><span>Capture 12</span>Je vérifie le statut, le slug et l&#x27;image mise en avant.</figcaption>
+      </figure>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>okay tu vas me faire un article seo assez long avec mon audit stp.
+Ajoute des images, mets des tableaux, des listes a puces, des exemples et des liens internes / externes.
+L&#x27;article doit faire environ 1400 mots.
+Ne fais pas d&#x27;auto-correction globale.
+Le but est de tester la structure que tu viens de construire.</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-55" class="section split" data-section="55">
+      <div>
+      <div class="meta-row">
+        <span class="num">55</span>
+        <span>prompt</span>
+        <span>méthode</span>
+      </div>
+    <h2>Importer proprement dans WordPress</h2><p class="lead">Je ne colle pas juste un texte brut. Je demande à Codex de remplir le titre, la catégorie, les tags, les champs ACF, l&#x27;image mise en avant et la preview.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Prends cet article et mets-le proprement dans WordPress.
+Titre : [TITRE_ARTICLE]
+Categorie : [CATEGORIE]
+Tags : [TAGS]
+Remplis les champs :
+- TL;DR
+- Temps de lecture
+- Niveau
+- FAQ
+- Sources
+- Date de mise a jour
+Ajoute une image mise en avant depuis la mediathèque.
+Publie seulement quand la preview est propre.</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-56" class="section" data-section="56">
+      
+      <div class="meta-row">
+        <span class="num">56</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>La preview avant publication</h2><p class="lead">Je vérifie la preview. Je regarde le titre, les espacements, l&#x27;image, le sommaire, la FAQ, le CTA et la sidebar. Si un élément casse, je corrige avant de publier.</p>
+      <figure class="shot">
+        <img src="img/session-10/17-codex-connected-mcp.jpg" alt="La connexion MCP permet à Codex d&#x27;ouvrir et lire WordPress." loading="lazy">
+        <figcaption><span>Capture 17</span>La connexion MCP permet à Codex d&#x27;ouvrir et lire WordPress.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-57" class="section split" data-section="57">
+      <div>
+      <div class="meta-row">
+        <span class="num">57</span>
+        <span>method</span>
+        <span>pratique</span>
+      </div>
+    <h2>La publication</h2><p class="lead">Publier ne veut pas dire que le travail est fini. Après publication je rouvre la page publique, sans être dans l&#x27;admin, et je vérifie ce qu&#x27;un visiteur voit vraiment.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+      <figure class="shot">
+        <img src="img/session-10/20-template-sidebar-notes.jpg" alt="Je précise sommaire, FAQ, sources et partage social." loading="lazy">
+        <figcaption><span>Capture 20</span>Je précise sommaire, FAQ, sources et partage social.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-58" class="section" data-section="58">
+      
+      <div class="meta-row">
+        <span class="num">58</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>La liste des articles</h2><p class="lead">La liste WordPress permet de contrôler les statuts : publié, brouillon, Elementor, auteur, catégorie, date. C&#x27;est mon tableau de bord éditorial.</p>
+      <figure class="shot">
+        <img src="img/session-10/20-template-sidebar-notes.jpg" alt="Je précise sommaire, FAQ, sources et partage social." loading="lazy">
+        <figcaption><span>Capture 20</span>Je précise sommaire, FAQ, sources et partage social.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-59" class="section" data-section="59">
+      
+      <div class="meta-row">
+        <span class="num">59</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>Les catégories dans l&#x27;admin</h2><p class="lead">Je vérifie que les catégories sont propres. Si je vois Uncategorized ou categorie-1 partout, je corrige. Les catégories doivent parler au business.</p>
+      <figure class="shot">
+        <img src="img/session-10/21-report-terminal.jpg" alt="Le rapport terminal donne la trace de ce qui a été fait." loading="lazy">
+        <figcaption><span>Capture 21</span>Le rapport terminal donne la trace de ce qui a été fait.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-60" class="section diagnostic-layout" data-section="60">
+      
+      <div class="meta-row">
+        <span class="num">60</span>
+        <span>diagnostic</span>
+        <span>pratique</span>
+      </div>
+    <h2>Les images d&#x27;article</h2><p class="lead">Une image trop générique ne sert pas. Pour RestIA, l&#x27;image doit évoquer l&#x27;IA, le restaurant, l&#x27;automatisation ou le sujet exact de l&#x27;article.</p>
+      <div class="diagnostic"><b>Diagnostic rapide</b><p>Si cette étape bloque, demande-toi : suis-je dans le bon dossier ? la bonne page ? le bon statut WordPress ? le bon écran public ?</p></div>
+      <figure class="shot">
+        <img src="img/session-10/23-final-article-check.jpg" alt="Je finis par une vérification visuelle de l&#x27;article publié." loading="lazy">
+        <figcaption><span>Capture 23</span>Je finis par une vérification visuelle de l&#x27;article publié.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-61" class="section" data-section="61">
+      
+      <div class="meta-row">
+        <span class="num">61</span>
+        <span>table</span>
+        <span>méthode</span>
+      </div>
+    <h2>Les liens internes</h2><p class="lead">Chaque article doit pointer vers au moins une page utile du site : solution, contact, audit, offre, autre article. Le blog doit soutenir le tunnel commercial.</p>
+      <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Pourquoi je le garde</th><th>Comment tu vérifies</th></tr></thead><tbody>
+      <tr><td>Structure</td><td>Elle évite que l'IA parte dans tous les sens.</td><td>Le résultat suit l'ordre prévu.</td></tr>
+      <tr><td>Business</td><td>Le blog doit servir le site, pas faire joli.</td><td>Chaque bloc mène vers une action utile.</td></tr>
+      <tr><td>Contrôle</td><td>Sans preuve, je ne valide pas.</td><td>Je regarde le site public et l'admin.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="section-62" class="section split warning-layout" data-section="62">
+      <div>
+      <div class="meta-row">
+        <span class="num">62</span>
+        <span>warning</span>
+        <span>vérification</span>
+      </div>
+    <h2>Les liens externes</h2><p class="lead">Un lien externe doit apporter une preuve ou une ressource. Je ne mets pas des liens pour remplir. Je choisis des sources fiables et je les ouvre avant de les ajouter.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-63" class="section" data-section="63">
+      
+      <div class="meta-row">
+        <span class="num">63</span>
+        <span>cards</span>
+        <span>pratique</span>
+      </div>
+    <h2>La sidebar</h2><p class="lead">La sidebar doit rester utile : newsletter, articles récents, tags. Si elle alourdit la page, je la simplifie. Sur mobile elle doit passer sous le contenu.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-64" class="section quote-layout" data-section="64">
+      
+      <div class="meta-row">
+        <span class="num">64</span>
+        <span>quote</span>
+        <span>méthode</span>
+      </div>
+    <blockquote>Le style RestIA est marqué : bordures, gros titres, vert, contraste. Mais un article reste un article. La lisibilité passe avant l&#x27;effet visuel.</blockquote><h2>Le design ne doit pas casser le contenu</h2>
+      <p class="lead">Je garde cette idée en tête pendant toute la séance : un blog utile se construit avec une méthode, pas avec une succession de clics.</p>
+      <figure class="shot">
+        <img src="img/session-10/07-pagespeed-check.jpg" alt="Je pense aux performances et au SEO dès la structure." loading="lazy">
+        <figcaption><span>Capture 07</span>Je pense aux performances et au SEO dès la structure.</figcaption>
+      </figure>
+    
+    </section>
+
+    <section id="section-65" class="section" data-section="65">
+      
+      <div class="meta-row">
+        <span class="num">65</span>
+        <span>check</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le test desktop</h2><p class="lead">Je vérifie en grand écran : largeur du contenu, alignement du sommaire, cards de l&#x27;archive, header, footer, CTA. Rien ne doit flotter bizarrement.</p>
+      <div class="check-grid">
+        <label><input type="checkbox"> Je sais quoi ouvrir</label>
+        <label><input type="checkbox"> Je sais quoi demander</label>
+        <label><input type="checkbox"> Je sais quelle preuve regarder</label>
+        <label><input type="checkbox"> Je sais quoi corriger si ça bloque</label>
+      </div>
+    </section>
+
+    <section id="section-66" class="section" data-section="66">
+      
+      <div class="meta-row">
+        <span class="num">66</span>
+        <span>check</span>
+        <span>pratique</span>
+      </div>
+    <h2>Le test mobile</h2><p class="lead">Je vérifie en 375px : titre, image, boutons, card, sidebar, tableau, prompt, CTA. Le texte ne doit pas sortir de l&#x27;écran.</p>
+      <div class="check-grid">
+        <label><input type="checkbox"> Je sais quoi ouvrir</label>
+        <label><input type="checkbox"> Je sais quoi demander</label>
+        <label><input type="checkbox"> Je sais quelle preuve regarder</label>
+        <label><input type="checkbox"> Je sais quoi corriger si ça bloque</label>
+      </div>
+    </section>
+
+    <section id="section-67" class="section" data-section="67">
+      
+      <div class="meta-row">
+        <span class="num">67</span>
+        <span>image</span>
+        <span>méthode</span>
+      </div>
+    <h2>Le test WordPress admin</h2><p class="lead">Je vérifie aussi l&#x27;admin : les champs sont simples, les catégories existent, la médiathèque charge, l&#x27;image mise en avant se sélectionne, le bouton publier reste accessible.</p>
+      <figure class="shot">
+        <img src="img/session-10/04-prompt-phases-blog.jpg" alt="Je découpe la mission en phases pour forcer la réflexion." loading="lazy">
+        <figcaption><span>Capture 04</span>Je découpe la mission en phases pour forcer la réflexion.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-68" class="section split" data-section="68">
+      <div>
+      <div class="meta-row">
+        <span class="num">68</span>
+        <span>prompt</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le rapport final</h2><p class="lead">Je demande à Codex de me dire ce qu&#x27;il a créé, ce qu&#x27;il a vérifié, les fichiers, les plugins, les scores et les points à surveiller. Un rapport évite de perdre la trace du travail.</p><div class="tip"><b>Pourquoi ce prompt sert</b><p>Il transforme une intention vague en tâche contrôlable. Tu peux le copier, remplacer les variables, puis vérifier le résultat.</p></div></div>
+      <div>
+      <figure class="shot">
+        <img src="img/session-10/06-homepage-restia-preview.jpg" alt="Je garde la cohérence avec le design déjà créé sur le site." loading="lazy">
+        <figcaption><span>Capture 06</span>Je garde la cohérence avec le design déjà créé sur le site.</figcaption>
+      </figure>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Controle la page /blog/ et le single post.
+Verifie desktop, tablette et mobile.
+Verifie que les titres ne debordent pas, que les cards ont la meme hauteur, que la sidebar ne casse pas, que les images chargent, que le slug est propre et que l&#x27;article est bien publie.
+Donne-moi une liste courte : OK, a corriger, correction faite.</code></pre>
+      </div>
+    </div>
+    </section>
+
+    <section id="section-69" class="section split" data-section="69">
+      <div>
+      <div class="meta-row">
+        <span class="num">69</span>
+        <span>story</span>
+        <span>pratique</span>
+      </div>
+    <h2>Ce que je garde dans mon QG</h2><p class="lead">Je garde les prompts, les URLs utiles, les décisions, les catégories, les champs ACF et les corrections. Ce support sert à refaire la séance sans repartir de zéro.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-70" class="section split warning-layout" data-section="70">
+      <div>
+      <div class="meta-row">
+        <span class="num">70</span>
+        <span>warning</span>
+        <span>méthode</span>
+      </div>
+    <h2>Ce qu&#x27;il ne faut pas déléguer aveuglément</h2><p class="lead">Je ne délègue pas le jugement éditorial. Codex peut construire, importer, tester. Mais je dois valider si le sujet est utile, si le ton est bon, si l&#x27;article sert vraiment mon business.</p></div>
+      <div class="warning"><b>Piège terrain</b><p>Si tu vas trop vite ici, tu gagnes dix minutes maintenant et tu en perds une heure plus tard. Reviens toujours à une preuve simple.</p></div>
+    </section>
+
+    <section id="section-71" class="section" data-section="71">
+      
+      <div class="meta-row">
+        <span class="num">71</span>
+        <span>before</span>
+        <span>vérification</span>
+      </div>
+    <h2>La différence entre contenu test et contenu stratégie</h2><p class="lead">Un article de test sert à vérifier l&#x27;affichage. Un article stratégique sert à capter des leads. Ne mélange pas les deux. Tant que la structure n&#x27;est pas validée, le contenu n&#x27;est qu&#x27;un test.</p>
+      <div class="before-after"><div><b>Avant</b><p>Une demande floue, un site qui peut casser, et un agent qui improvise.</p></div><div><b>Après</b><p>Un chemin clair : contexte, prompt, exécution, contrôle, correction.</p></div></div>
+    </section>
+
+    <section id="section-72" class="section" data-section="72">
+      
+      <div class="meta-row">
+        <span class="num">72</span>
+        <span>timeline</span>
+        <span>pratique</span>
+      </div>
+    <h2>La suite logique</h2><p class="lead">Après cette séance, tu peux automatiser la création d&#x27;articles : plan éditorial, sources, rédaction, images, publication, contrôle qualité. Mais cette automatisation vaut seulement si le blog est propre.</p>
+      <div class="timeline"><div><span>1</span>Préparer</div><div><span>2</span>Construire</div><div><span>3</span>Tester</div><div><span>4</span>Publier</div></div>
+    </section>
+
+    <section id="section-73" class="section" data-section="73">
+      
+      <div class="meta-row">
+        <span class="num">73</span>
+        <span>check</span>
+        <span>méthode</span>
+      </div>
+    <h2>Mini checklist avant de passer à l&#x27;automatisation</h2><p class="lead">Je valide : /blog/ charge, un article s&#x27;affiche, les catégories sont propres, les champs se remplissent, l&#x27;image apparaît, le slug est bon, le mobile passe, les articles test ne polluent pas le site.</p>
+      <div class="check-grid">
+        <label><input type="checkbox"> Je sais quoi ouvrir</label>
+        <label><input type="checkbox"> Je sais quoi demander</label>
+        <label><input type="checkbox"> Je sais quelle preuve regarder</label>
+        <label><input type="checkbox"> Je sais quoi corriger si ça bloque</label>
+      </div>
+    </section>
+
+    <section id="section-74" class="section recap" data-section="74">
+      
+      <div class="meta-row">
+        <span class="num">74</span>
+        <span>recap</span>
+        <span>vérification</span>
+      </div>
+    <h2>Ce que tu dois retenir</h2><p class="lead">Le blog automatique commence par une structure propre. Si la structure est bonne, l&#x27;IA peut publier à grande échelle. Si la structure est mauvaise, l&#x27;IA publie vite un mauvais système.</p>
+      <div class="recap-grid"><div>/blog/ propre</div><div>Article lisible</div><div>Champs remplis</div><div>Mobile validé</div><div>Catégories utiles</div><div>Prompts gardés</div></div>
+    </section>
+
+    <section id="section-75" class="section split" data-section="75">
+      <div>
+      <div class="meta-row">
+        <span class="num">75</span>
+        <span>method</span>
+        <span>pratique</span>
+      </div>
+    <h2>Plan de répétition</h2><p class="lead">Refais la séance une fois sur un site de test. Puis refais-la sur ton vrai projet. Plus tu répètes cette méthode, plus tu sais guider Codex sans sur-expliquer.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-76" class="section" data-section="76">
+      
+      <div class="meta-row">
+        <span class="num">76</span>
+        <span>cards</span>
+        <span>méthode</span>
+      </div>
+    <h2>La compétence business</h2><p class="lead">Tu peux vendre cette compétence : créer un blog WordPress prêt pour la publication IA, avec template, champs, SEO, catégories, système d&#x27;article et contrôle qualité.</p>
+      <div class="card-grid"><div><b>Ce que je prépare</b><p>Je clarifie l'entrée de travail.</p></div><div><b>Ce que je crée</b><p>Je transforme l'idée en bloc exploitable.</p></div><div><b>Ce que je vérifie</b><p>Je regarde le résultat dans l'outil réel.</p></div></div>
+    </section>
+
+    <section id="section-77" class="section" data-section="77">
+      
+      <div class="meta-row">
+        <span class="num">77</span>
+        <span>image</span>
+        <span>vérification</span>
+      </div>
+    <h2>Le dernier contrôle</h2><p class="lead">Avant de dire que c&#x27;est terminé, j&#x27;ouvre le site public, je clique sur Blog, je clique sur un article, je reviens à l&#x27;archive, je teste mobile, puis je note les corrections.</p>
+      <figure class="shot">
+        <img src="img/session-10/18-elementor-context.jpg" alt="Elementor sert de contexte visuel pour reproduire le style." loading="lazy">
+        <figcaption><span>Capture 18</span>Elementor sert de contexte visuel pour reproduire le style.</figcaption>
+      </figure>
+    
+      <div class="note-row"><div><b>Action</b><p>Je vérifie l'écran réel avant de passer à la suite.</p></div><div><b>Preuve</b><p>Je peux expliquer ce que je vois et pourquoi je l'utilise.</p></div></div>
+    </section>
+
+    <section id="section-78" class="section split" data-section="78">
+      <div>
+      <div class="meta-row">
+        <span class="num">78</span>
+        <span>method</span>
+        <span>pratique</span>
+      </div>
+    <h2>Pourquoi je parle déjà de VPS</h2><p class="lead">À la fin je prépare la suite : pour automatiser vraiment la publication, il faudra un endroit qui tourne tout seul. C&#x27;est le rôle du VPS. Le site WordPress reçoit les articles, mais le système qui les fabrique peut vivre ailleurs.</p></div>
+      <div class="method-box"><b>Méthode</b><ol><li>Je prépare le contexte.</li><li>Je lance une action courte.</li><li>Je vérifie dans l'interface réelle.</li><li>Je corrige uniquement ce qui bloque.</li></ol></div>
+    </section>
+
+    <section id="section-79" class="section" data-section="79">
+      
+      <div class="meta-row">
+        <span class="num">79</span>
+        <span>timeline</span>
+        <span>méthode</span>
+      </div>
+    <h2>Pourquoi les API arrivent après</h2><p class="lead">Les API servent à brancher les modèles, récupérer des données, générer du contenu, créer des images, pousser dans WordPress et contrôler le résultat. Je n&#x27;attaque pas ça tant que le blog n&#x27;est pas propre, parce que l&#x27;automatisation amplifierait les défauts.</p>
+      <div class="timeline"><div><span>1</span>Préparer</div><div><span>2</span>Construire</div><div><span>3</span>Tester</div><div><span>4</span>Publier</div></div>
+    </section>
+
+    <section id="section-80" class="section final" data-section="80">
+      <div class="hero-grid">
+        <div>
+      <div class="meta-row">
+        <span class="num">80</span>
+        <span>final</span>
+        <span>vérification</span>
+      </div>
+    <h2>Fin de séance</h2><p class="lead">À la fin, je n&#x27;ai pas seulement un blog. J&#x27;ai une base réutilisable. Chaque futur article aura une structure, des champs, un slug, une image, une catégorie et une logique business.</p>
+          <div class="hero-actions"><a href="#section-09">Commencer</a><a href="#prompts">Prompts</a><a href="#section-80">Checklist finale</a></div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+  <section id="assets" class="assets-list">
+    <div class="meta-row"><span class="num">IMG</span><span>23 captures</span><span>aucune image externe</span></div>
+    <h2>Captures utilisées dans le support</h2>
+    <p class="lead">Les visuels servent à expliquer les étapes réelles : dossier, Codex, WordPress, article, catégories, image mise en avant, médiathèque et contrôle.</p>
+    <ol><li><a href="img/session-10/01-intro-blog-site.jpg" target="_blank">Capture 01</a> — Je pose le sujet : le blog devient la base de publication du site.</li><li><a href="img/session-10/02-wordpress-site-reference.jpg" target="_blank">Capture 02</a> — Je pars du site RestIA existant, pas d&#x27;un écran vide.</li><li><a href="img/session-10/03-prompt-analyse-contexte.jpg" target="_blank">Capture 03</a> — Je prépare un prompt long pour que Codex analyse le contexte.</li><li><a href="img/session-10/04-prompt-phases-blog.jpg" target="_blank">Capture 04</a> — Je découpe la mission en phases pour forcer la réflexion.</li><li><a href="img/session-10/05-structure-template-article.jpg" target="_blank">Capture 05</a> — Je détaille le template d&#x27;article avant de demander l&#x27;exécution.</li><li><a href="img/session-10/06-homepage-restia-preview.jpg" target="_blank">Capture 06</a> — Je garde la cohérence avec le design déjà créé sur le site.</li><li><a href="img/session-10/07-pagespeed-check.jpg" target="_blank">Capture 07</a> — Je pense aux performances et au SEO dès la structure.</li><li><a href="img/session-10/08-codex-terminal-action.jpg" target="_blank">Capture 08</a> — Codex travaille dans le terminal sur une mission longue.</li><li><a href="img/session-10/09-codex-wordpress-working.jpg" target="_blank">Capture 09</a> — Codex pilote WordPress et continue les vérifications.</li><li><a href="img/session-10/10-single-post-test.jpg" target="_blank">Capture 10</a> — Le premier article test valide le template Single Post.</li><li><a href="img/session-10/11-acf-fields-wordpress.jpg" target="_blank">Capture 11</a> — Les champs ACF rendent l&#x27;article plus professionnel.</li><li><a href="img/session-10/12-gutenberg-article-published.jpg" target="_blank">Capture 12</a> — Je vérifie le statut, le slug et l&#x27;image mise en avant.</li><li><a href="img/session-10/13-single-post-content-table.jpg" target="_blank">Capture 13</a> — Le contenu long doit rester lisible avec sommaire et tableaux.</li><li><a href="img/session-10/14-blog-archive-empty.jpg" target="_blank">Capture 14</a> — L&#x27;archive /blog/ montre la structure de cartes et de sidebar.</li><li><a href="img/session-10/15-wordpress-admin-pages.jpg" target="_blank">Capture 15</a> — Je contrôle l&#x27;admin WordPress pour vérifier les pages et contenus.</li><li><a href="img/session-10/16-prompt-copy-full.jpg" target="_blank">Capture 16</a> — Le prompt complet précise les livrables et les variables.</li><li><a href="img/session-10/17-codex-connected-mcp.jpg" target="_blank">Capture 17</a> — La connexion MCP permet à Codex d&#x27;ouvrir et lire WordPress.</li><li><a href="img/session-10/18-elementor-context.jpg" target="_blank">Capture 18</a> — Elementor sert de contexte visuel pour reproduire le style.</li><li><a href="img/session-10/19-template-hero-notes.jpg" target="_blank">Capture 19</a> — Je précise le hero article, la catégorie et la méta row.</li><li><a href="img/session-10/20-template-sidebar-notes.jpg" target="_blank">Capture 20</a> — Je précise sommaire, FAQ, sources et partage social.</li><li><a href="img/session-10/21-report-terminal.jpg" target="_blank">Capture 21</a> — Le rapport terminal donne la trace de ce qui a été fait.</li><li><a href="img/session-10/22-seo-article-request.jpg" target="_blank">Capture 22</a> — Je teste ensuite avec un vrai sujet SEO plus long.</li><li><a href="img/session-10/23-final-article-check.jpg" target="_blank">Capture 23</a> — Je finis par une vérification visuelle de l&#x27;article publié.</li></ol>
+  </section>
+  <section id="prompts" class="assets-list">
+    <div class="meta-row"><span class="num">PROMPTS</span><span>copiables</span><span>à garder</span></div>
+    <h2>Index des prompts</h2>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>connecte toi a mon site stp en mcp https://restia.fun/wp-admin/post.php?post=254&amp;action=elementor</code></pre>
+      </div>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Tu es un lead developer WordPress + Elementor Pro et un expert SEO/GEO.
+Tu as acces au Chrome MCP. Utilise-le pour regarder mon site et verifier le rendu.
+
+Contexte :
+J&#x27;ai deja construit mon site RestIA en Elementor : accueil, solutions, contact, header et footer.
+Maintenant je veux monter la partie blog.
+Attention : je ne veux pas encore produire des dizaines d&#x27;articles.
+Je veux preparer la structure propre qui va recevoir les articles ensuite.
+
+Mission :
+1. Creer la page archive /blog/.
+2. Creer le template Single Post pour tous les articles.
+3. Installer ou verifier les bons plugins.
+4. Creer les categories et les champs ACF.
+5. Tester avec des articles factices, puis remettre les tests en brouillon.
+
+Travaille en 5 phases.
+Avant chaque phase, ecris ce que tu vas faire.
+Apres chaque phase, ecris ce que tu as produit et ce que tu as appris.
+
+PHASE 1 - Discovery
+- Crawle la home, les pages principales, le header et le footer.
+- Extrais la palette, les typos, les espacements, les bordures, les radius, les ombres, les animations et le ton.
+- Note les composants Elementor deja presents.
+- Cree discovery.md, design-tokens.json et seo-stack.md.
+
+PHASE 2 - Prerequis WordPress
+- Verifie ou installe Rank Math Free.
+- Verifie ou installe ACF Free.
+- Verifie ou installe ACF to REST API.
+- Verifie ou installe Smush ou un plugin de compression image.
+- Cree des categories propres selon le secteur. Ne cree pas categorie-1, categorie-2, etc.
+- Cree des tags utiles : Agent IA, Automatisation, News IA.
+- Cree les champs article :
+  - en_resume
+  - temps_lecture
+  - niveau
+  - faq
+  - sources
+  - mise_a_jour_manuelle
+
+PHASE 3 - Template Single Post
+Construis dans Elementor Theme Builder -&gt; Single Post.
+Condition : tous les posts.
+Structure :
+1. Breadcrumb.
+2. Hero post avec tag categorie, H1, extrait, avatar, auteur, date, temps de lecture, niveau.
+3. Image mise en avant en 16:9.
+4. Bloc en_resume si le champ est rempli.
+5. Sommaire sticky sur desktop.
+6. Contenu article avec H2, H3, callouts, tableaux responsive, images et captions.
+7. FAQ si le champ est rempli.
+8. Sources si le champ est rempli.
+9. Bloc auteur.
+10. CTA contextualise.
+11. Articles lies.
+12. Partage LinkedIn, X et copier le lien.
+13. Pas de commentaires.
+
+PHASE 4 - Archive /blog/
+Construis dans Elementor Theme Builder -&gt; Archive.
+Condition : Posts Archive.
+Structure :
+1. Hero archive compact avec H1, baseline et recherche.
+2. Article epingle optionnel.
+3. Filtres categories en pills.
+4. Grid articles : 3 colonnes desktop, 2 tablette, 1 mobile.
+5. Card avec image 4:3, categorie, titre 2 lignes max, extrait 2 lignes max, date et temps de lecture.
+6. Pagination numerotee, pas de load more.
+7. Sidebar : newsletter, articles recents, tags.
+8. Etat vide propre si aucun article n&#x27;est publie.
+
+PHASE 5 - Verification
+- Cree 2 posts factices avec image, categorie et champs remplis.
+- Verifie /blog/.
+- Clique sur un article et verifie le template.
+- Verifie mobile 375px.
+- Verifie Lighthouse sur archive et single post.
+- Verifie le schema si possible.
+- Remets les posts factices en brouillon.
+
+Rapport final :
+Cree RAPPORT.md avec les plugins, les champs, les categories, les captures, les scores, les corrections et la prochaine etape.
+
+GO.</code></pre>
+      </div>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>okay tu vas me faire un article seo assez long avec mon audit stp.
+Ajoute des images, mets des tableaux, des listes a puces, des exemples et des liens internes / externes.
+L&#x27;article doit faire environ 1400 mots.
+Ne fais pas d&#x27;auto-correction globale.
+Le but est de tester la structure que tu viens de construire.</code></pre>
+      </div>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Fais-moi un article sur l&#x27;intelligence artificielle pour tester mon blog.
+Je veux un contenu simple, clair, avec une introduction, des H2, des exemples, une FAQ courte et une conclusion.
+Garde un style naturel. Le but est de voir si mon template WordPress affiche bien un article complet.</code></pre>
+      </div>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Prends cet article et mets-le proprement dans WordPress.
+Titre : [TITRE_ARTICLE]
+Categorie : [CATEGORIE]
+Tags : [TAGS]
+Remplis les champs :
+- TL;DR
+- Temps de lecture
+- Niveau
+- FAQ
+- Sources
+- Date de mise a jour
+Ajoute une image mise en avant depuis la mediathèque.
+Publie seulement quand la preview est propre.</code></pre>
+      </div>
+    
+      <div class="prompt-card">
+        <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+        <pre><code>Controle la page /blog/ et le single post.
+Verifie desktop, tablette et mobile.
+Verifie que les titres ne debordent pas, que les cards ont la meme hauteur, que la sidebar ne casse pas, que les images chargent, que le slug est propre et que l&#x27;article est bien publie.
+Donne-moi une liste courte : OK, a corriger, correction faite.</code></pre>
+      </div>
+    
+  </section>
+  <footer class="footer"><div class="footer-inner"><span>DENEM Academy · Séance 10</span><span>Blog automatique avec Codex</span></div></footer>
+  <script>
+    const progress = document.getElementById('progress');
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const sections = [...document.querySelectorAll('[data-section]')];
+    const update = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = Math.max(0, Math.min(100, scrollY / max * 100)) + '%';
+      let active = 0;
+      sections.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * .35) active = i; });
+      navLinks.forEach((a, i) => a.classList.toggle('active', i === active));
+    };
+    addEventListener('scroll', update, {passive:true}); update();
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.closest('.prompt-card').querySelector('code').innerText;
+        await navigator.clipboard.writeText(code);
+        btn.classList.add('copied'); btn.innerText = 'Copié';
+        setTimeout(() => { btn.classList.remove('copied'); btn.innerText = 'Copier'; }, 1200);
+      });
+    });
+    const obs = new IntersectionObserver(entries => entries.forEach(e => e.target.classList.toggle('visible', e.isIntersecting)), {threshold:.12});
+    document.querySelectorAll('.section,.summary-card,.shot').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+    addEventListener('keydown', e => {
+      if (e.key.toLowerCase() === 'b') document.body.classList.toggle('show-blog-path');
+    });
+  </script>
+</body>
+</html>
